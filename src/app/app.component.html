@@ -1,11 +1,17 @@
 <div class="container">
   <h2>Title: {{ title }}</h2>
   <hr />
-  <h2>Today: {{ today }}</h2>
+  <h2>Today: {{ today | date: 'dd-MMMM-yyyy' | uppercase }}</h2>
   <hr />
-  <h2>PI: {{ pi }}</h2>
+  <h2>PI: {{ pi | number: '' }}</h2>
   <hr />
-  <h2>Rate: {{ rate }}</h2>
+  <h2>Rate: {{ rate | percent }}</h2>
   <hr />
-  <h2>Car: {{ car }}</h2>
+  <h2>Car: {{ car | json }}</h2>
+
+  <hr />
+  <h3 *ngIf="condition; else otherBlock">Condition is met</h3>
+  <ng-template #otherBlock>
+    <h3>This is the other block</h3>
+  </ng-template>
 </div>
