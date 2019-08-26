@@ -1,47 +1,5 @@
+<app-nav></app-nav>
+
 <div class="container">
-  <h2>Title: {{ title }} {{ num }}</h2>
-  <hr />
-  <h2>Today: {{ today | date: 'dd-MMMM-yyyy' | uppercase }}</h2>
-  <hr />
-  <h2>PI: {{ pi | number: '' }}</h2>
-  <hr />
-  <h2>Rate: {{ rate | percent }}</h2>
-  <hr />
-  <h2>Car: {{ car | json }}</h2>
-
-  <hr />
-  <h3 *ngIf="condition; else otherBlock">Condition is met</h3>
-  <ng-template #otherBlock>
-    <h3>This is the other block</h3>
-  </ng-template>
-
-  <hr />
-  <ng-container [ngSwitch]="country">
-    <h4 *ngSwitchCase="'IN'">India</h4>
-    <h4 *ngSwitchCase="'FR'">France</h4>
-    <h4 *ngSwitchDefault>Default Country</h4>
-  </ng-container>
-
-  <hr />
-  <ul>
-    <li
-      *ngFor="
-        let item of typeSafeArray;
-        index as i;
-        first as f;
-        last as l;
-        even as e;
-        odd as o
-      "
-    >
-      {{ i + 1 }}. {{ item }}
-      <span class="badge badge-primary" *ngIf="f">First</span>
-      <span class="badge badge-danger" *ngIf="l">Last</span>
-    </li>
-  </ul>
-
-  <hr />
-  <button class="btn btn-warning" (click)="methodHandler()">
-    Click Me
-  </button>
+  <app-poll-container></app-poll-container>
 </div>

@@ -12,21 +12,4 @@ class Car {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Hi there!';
-  today = new Date();
-  pi = 3.14159265359;
-  rate = 0.67;
-  num = 1.25;
-  car = new Car();
-  condition = false;
-  country = 'RU';
-
-  lousyArray = [1, true, new Date(), 'Hello'];
-
-  typeSafeArray: string[] = ['One', 'Two', 'Three'];
-
-  methodHandler() {
-    this.title = 'Changed';
-  }
-}
+export class AppComponent {}
