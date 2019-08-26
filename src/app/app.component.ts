@@ -19,4 +19,5 @@ export class AppComponent {
   num = 1.25;
   car = new Car();
   condition = false;
+  country = 'RU';
 }

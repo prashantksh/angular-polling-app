@@ -14,4 +14,11 @@
   <ng-template #otherBlock>
     <h3>This is the other block</h3>
   </ng-template>
+
+  <hr />
+  <ng-container [ngSwitch]="country">
+    <h4 *ngSwitchCase="'IN'">India</h4>
+    <h4 *ngSwitchCase="'FR'">France</h4>
+    <h4 *ngSwitchDefault>Default Country</h4>
+  </ng-container>
 </div>
