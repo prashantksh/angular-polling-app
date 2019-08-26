@@ -12,4 +12,10 @@ class Car {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  val = 'Hello there';
+
+  getMessage() {
+    return 'This is title';
+  }
+}
