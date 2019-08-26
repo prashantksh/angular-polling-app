@@ -20,4 +20,8 @@ export class AppComponent {
   car = new Car();
   condition = false;
   country = 'RU';
+
+  lousyArray = [1, true, new Date(), 'Hello'];
+
+  typeSafeArray: string[] = ['One', 'Two', 'Three'];
 }

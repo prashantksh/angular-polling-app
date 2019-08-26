@@ -21,4 +21,9 @@
     <h4 *ngSwitchCase="'FR'">France</h4>
     <h4 *ngSwitchDefault>Default Country</h4>
   </ng-container>
+
+  <hr />
+  <ul>
+    <li *ngFor="let item of typeSafeArray">{{ item }}</li>
+  </ul>
 </div>
