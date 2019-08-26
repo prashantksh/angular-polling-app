@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Title: {{ title }}</h2>
+  <h2>Title: {{ title }} {{ num }}</h2>
   <hr />
   <h2>Today: {{ today | date: 'dd-MMMM-yyyy' | uppercase }}</h2>
   <hr />
@@ -39,4 +39,9 @@
       <span class="badge badge-danger" *ngIf="l">Last</span>
     </li>
   </ul>
+
+  <hr />
+  <button class="btn btn-warning" (click)="methodHandler()">
+    Click Me
+  </button>
 </div>

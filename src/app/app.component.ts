@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 class Car {
   name = 'BMW';
@@ -24,4 +25,8 @@ export class AppComponent {
   lousyArray = [1, true, new Date(), 'Hello'];
 
   typeSafeArray: string[] = ['One', 'Two', 'Three'];
+
+  methodHandler() {
+    this.title = 'Changed';
+  }
 }
