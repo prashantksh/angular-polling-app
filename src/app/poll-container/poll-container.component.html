@@ -1,1 +1,6 @@
-<h2>{{ title }}</h2>
+<h3 class="my-3">Poll Your Choice!</h3>
+<div class="row">
+  <div class="col" *ngFor="let item of pollItems">
+    <app-poll-item [item]="item"></app-poll-item>
+  </div>
+</div>
