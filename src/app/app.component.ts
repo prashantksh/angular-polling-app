@@ -16,5 +16,7 @@ export class AppComponent {
   today = new Date();
   pi = 3.14159265359;
   rate = 0.67;
+  num = 1.25;
   car = new Car();
+  condition = false;
 }
