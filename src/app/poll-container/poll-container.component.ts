@@ -40,4 +40,14 @@ export class PollContainerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  get totalCount(): number {
+    let total = 0;
+
+    this.pollItems.forEach(p => {
+      total += +p.voteCount;
+    });
+
+    return total;
+  }
 }
