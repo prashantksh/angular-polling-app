@@ -12,4 +12,8 @@ export class PollItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  voteHandler() {
+    this.item.voteCount++;
+  }
 }
