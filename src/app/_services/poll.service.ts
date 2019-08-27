@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PollItem } from 'src/_models/poll-item.model';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +37,8 @@ export class PollService {
   ];
   constructor() {}
 
-  get items(): PollItem[] {
-    return this.pollItems;
+  get items(): Observable<PollItem[]> {
+    return of(this.pollItems);
   }
 
   get totalCount(): number {
