@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { PollItem } from 'src/_models/poll-item.model';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -35,10 +36,11 @@ export class PollService {
       voteCount: 0
     }
   ];
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   get items(): Observable<PollItem[]> {
-    return of(this.pollItems);
+    //return of(this.pollItems);
+    return this.http.get<PollItem[]>('http://localhost:3000/api/get');
   }
 
   get totalCount(): number {
@@ -49,5 +51,9 @@ export class PollService {
     });
 
     return total;
+  }
+
+  createPollItem(item): Observable<any> {
+    return this.http.post('http://localhost:3000/api/create', item);
   }
 }
