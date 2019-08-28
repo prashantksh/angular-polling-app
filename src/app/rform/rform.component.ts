@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-rform',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rform.component.css']
 })
 export class RformComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  pollForm: FormGroup;
+  constructor() {
+    this.pollForm = new FormGroup({
+      id: new FormControl(0, Validators.required),
+      title: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5)
+      ]),
+      description: new FormControl(''),
+      group: new FormControl('Development', Validators.required),
+      imageUrl: new FormControl('')
+    });
   }
 
+  ngOnInit() {}
+
+  onSubmit() {
+    console.log(this.pollForm.value);
+  }
 }
