@@ -23,6 +23,14 @@
       {{ title?.errors?.minlength.requiredLength }}, but you have given
       {{ title?.errors?.minlength.actualLength }}
     </div>
+
+    <div
+      class="alert alert-warning"
+      role="alert"
+      *ngIf="title?.errors?.async_error"
+    >
+      Async error occured!
+    </div>
   </div>
 
   <div class="form-group">
