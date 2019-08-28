@@ -23,6 +23,10 @@ export class RformComponent implements OnInit {
 
   ngOnInit() {}
 
+  get title() {
+    return this.pollForm.controls['title'];
+  }
+
   onSubmit() {
     console.log(this.pollForm.value);
   }

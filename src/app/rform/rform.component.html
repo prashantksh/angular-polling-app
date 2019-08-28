@@ -17,12 +17,11 @@
     <div
       class="alert alert-danger"
       role="alert"
-      *ngIf="(pollForm?.controls)['title']?.errors?.minlength"
+      *ngIf="title?.errors?.minlength"
     >
       You need to supply
-      {{ (pollForm?.controls)['title']?.errors?.minlength.requiredLength }}, but
-      you have given
-      {{ (pollForm?.controls)['title']?.errors?.minlength.actualLength }}
+      {{ title?.errors?.minlength.requiredLength }}, but you have given
+      {{ title?.errors?.minlength.actualLength }}
     </div>
   </div>
 
